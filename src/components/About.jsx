@@ -22,15 +22,15 @@ const About = () => {
       <section id="about ">
         <div className="container mx-auto mt-12">
           <div className="flex flex-col gap-2 mb-4 justify-center items-center">
-            <h1 className="text-4xl font-bold">Novos conhecimentos</h1>
-            <p className="font-light ">
+            <h1 className="text-4xl font-bold xl:text-left lg:text-left text-center">Novos conhecimentos</h1>
+            <p className="font-light xl:text-left lg:text-left text-center">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum
               corrupti quibusdam animi a explicabo?
             </p>
           </div>
-          <div className="flex gap-6 justify-center item-center">
-            <div className="card-box flex justify-start gap-4 flex-row flex-1  max-w-sm">
-              <div className="card-field flex flex-col gap-3 shadow-2xl transform hover:scale-110 transition-transform delay-100 ease-out p-8 mt-12">
+          <div className="xl:flex lg:flex gap-6 justify-center item-center">
+            <div className="card-box flex justify-start gap-4 flex-row flex-1  w-full ">
+              <div className="card-field flex flex-col gap-3 shadow-2xl max-w-sm transform hover:scale-110 transition-transform delay-100 ease-out p-8 mt-12">
                 <span className="icon-card text-6xl text-secondary">
                   <TbUsersGroup />
                 </span>

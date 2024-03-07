@@ -27,7 +27,7 @@ const vANDd = () => {
             <div className="flex flex-col gap-4">
               <h1 className="text-3xl mt-4 text-center underline">Vantagens</h1>
 
-              <div className="flex gap-5 w-full">
+              <div className="flex xl:flex-row flex-col gap-5 w-full">
                 <div className="card-field flex flex-col gap-4 max-w-md shadow-2xl p-6 bg-secondary text-white transform hover:scale-110 transition-transform ease-in-out delay-100">
                   <div>
                     <div className="p-3 max-w-max rounded-full bg-[#000] text-3xl mb-3 text-white">
@@ -105,7 +105,7 @@ const vANDd = () => {
             <div className="flex flex-col gap-4">
               <h1 className="text-3xl mt-4 text-[#7f1d1d] text-center underline">Desvantagens</h1>
 
-              <div className="flex gap-5 w-full">
+              <div className="flex xl:flex-row flex-col gap-5 w-full">
                 <div className="card-field flex flex-col gap-4 max-w-md shadow-2xl p-6 bg-[#7f1d1d] text-white transform hover:scale-110 transition-transform ease-in-out delay-100">
                   <div>
                     <div className="p-3 max-w-max rounded-full bg-[#000] text-3xl mb-3 text-white ">
