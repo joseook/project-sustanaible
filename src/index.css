@@ -1,3 +1,17 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 9% 0 100px;
+}
