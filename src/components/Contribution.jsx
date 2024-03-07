@@ -15,7 +15,7 @@ const Contribution = () => {
 
             <button className="p-2 bg-primary rounded-lg hover:bg-white hover:text-[#000] transform hover:scale-110 transition-transform ease-in delay-100">
               <a
-                href="./Contact.jsx"
+                href="../Contact.jsx"
                 target="_blank"
                 rel="noopener noreferrer"
               >
