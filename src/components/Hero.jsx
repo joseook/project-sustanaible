@@ -26,11 +26,17 @@ const Hero = () => {
                 </div>
 
             </div>
-            <div className="max-w-[400px] h-auto">
-                <img src="./hero/img03.jpg" alt="Imagem Home Sustentavel" />
+            <div className="flex items-center justify-center">
+                <div className="flex ">
+                  <img src="./hero/hero-img-removebg-preview.png" className="z-10 " alt="Imagem Home Sustentavel" />
+                  <img className="absolute " src="./hero/shape-liquidation02-removebg-preview.png" alt="shapeLiquid" />
+                </div>
             </div>
           </div>
   
+        </div>
+        <div className="absolute left-0 z-[-10]">
+          <img src="./hero/hand-flower-removebg-preview.png" alt="hand-flower" />
         </div>
       </section>
     </>

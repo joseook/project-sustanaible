@@ -33,8 +33,22 @@ export default {
       lightGray: '#F5F5F5',
       darkGray: '#4C51BF',
       blue: '#10B981',
+      red_500: '#ef4444',
+      red_900: '#7f1d1d',
+      yellow_200: '#fef08a',
+      
     
     },
+    extend: {
+      backgroundImage: {
+        'wavy-shape': "url('./about/wavy-shape.jpg')",
+        'body-card': "url('./about/img05.jpg')",
+        'body-card02': "url('./about/img06.jpg')",
+        'shape-liquid': "url('./hero/shape-liquidation-removebg-preview.png')",
+        'shape-liquid02': "url('./hero/shape-liquidation02-removebg-preview.png')",
+        'wave-shape02': "url('./contribution/wavy-shape.jpg')"
+      }
+    }
   },
   plugins: [],
 }
