@@ -4,9 +4,10 @@ import { useInView } from 'react-intersection-observer';
 import { useEffect } from 'react';
 
 const Contribution = () => {
+
   const { ref, inView } = useInView();
   const controls = useAnimation();
-
+  
   useEffect(() => {
     if (inView) {
       controls.start({ opacity: 1, y: 0, transition: { delay: 0.5 } });
@@ -66,7 +67,7 @@ const Contribution = () => {
                 to="/contact"
                 className="p-2 bg-primary rounded-lg hover:bg-white hover:text-[#000] transform hover:scale-110 transition-transform ease-in delay-100"
               >
-                Clique aqui
+               Clique aqui para contribuir  
               </Link>
             </motion.div>
           </motion.div>
