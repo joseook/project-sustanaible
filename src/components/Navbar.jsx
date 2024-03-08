@@ -9,7 +9,7 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
-  useEffect(() => {
+  useEffect(() => {                           
     const handleResize = () => {
       if (window.innerWidth > 768) {
         setIsOpen(false);
@@ -49,7 +49,7 @@ const Navbar = () => {
         >
           <ul className="lg:flex lg:items-center lg:gap-4 lg:font-bold lg:text-xl lg:ml-auto lg:pt-0 h-full md:shadow-2xl p-4 rounded-sm">
             <motion.li whileHover={{ scale: 1.1 }}>
-              <Link to="#hero" className="hover:bg-primary p-2 rounded-lg hover:text-[#fff]">Home</Link>
+              <Link to="/" className="hover:bg-primary p-2 rounded-lg hover:text-[#fff]">Home</Link>
             </motion.li>
             <motion.li whileHover={{ scale: 1.1 }}>
               <Link to="#about" className="hover:bg-primary p-2 rounded-lg hover:text-[#fff]">Sobre</Link>
