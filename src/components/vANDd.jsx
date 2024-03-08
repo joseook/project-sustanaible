@@ -1,21 +1,64 @@
+import { useEffect } from "react";
+import { motion, useAnimation } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 import { GiPlantsAndAnimals } from "react-icons/gi";
 import { SiSimpleanalytics } from "react-icons/si";
 import { LiaEnvira } from "react-icons/lia";
-
-
 import { IoAnalytics } from "react-icons/io5";
 import { FaMoneyCheckAlt } from "react-icons/fa";
 import { FaUserFriends } from "react-icons/fa";
 
-const vANDd = () => {
+const VANDd = () => {
+  const { ref, inView } = useInView();
+  const controls = useAnimation();
+
+  useEffect(() => {
+    if (inView) {
+      controls.start({ opacity: 1, y: 0, transition: { delay: 0.5 } });
+    } else {
+      controls.start({ opacity: 0, y: -50 });
+    }
+  }, [controls, inView]);
+
+  const cardVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+      },
+    },
+  };
+
+  const titleVariants = {
+    hidden: { opacity: 0, y: -50 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        duration: 0.5,
+        ease: "easeInOut",
+        delay: 0.3,
+      },
+    },
+  };
+
   return (
     <>
-      <section>
+      <section id="advantage">
         <div className="container mx-auto px-4">
           <div className="flex flex-col">
-            <h1 className="text-5xl font-bold text-center mb-7">
-              Vantages e desvantagens
-            </h1>
+            <motion.h1
+              className="text-5xl font-bold text-center mb-7"
+              variants={titleVariants}
+              initial="hidden"
+              animate={controls}
+              ref={ref}
+            >
+              Vantagens e desvantagens
+            </motion.h1>
             <p className="text-center">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Cupiditate enim doloremque sit dolor atque ratione! Perspiciatis
@@ -28,7 +71,13 @@ const vANDd = () => {
               <h1 className="text-3xl mt-4 text-center underline">Vantagens</h1>
 
               <div className="flex xl:flex-row flex-col gap-5 w-full">
-                <div className="card-field flex flex-col gap-4 max-w-md shadow-2xl p-6 bg-secondary text-white transform hover:scale-110 transition-transform ease-in-out delay-100">
+                <motion.div
+                  className="card-field flex flex-col gap-4 max-w-md shadow-2xl p-6 bg-secondary text-white"
+                  variants={cardVariants}
+                  initial="hidden"
+                  animate={controls}
+                  ref={ref}
+                >
                   <div>
                     <div className="p-3 max-w-max rounded-full bg-[#000] text-3xl mb-3 text-white">
                       <GiPlantsAndAnimals />
@@ -49,9 +98,15 @@ const vANDd = () => {
                       </button>
                     </div>
                   </div>
-                </div>
+                </motion.div>
 
-                <div className="card-field flex flex-col gap-4 max-w-md shadow-2xl p-6 transform hover:scale-110 transition-transform ease-in-out delay-100">
+                <motion.div
+                  className="card-field flex flex-col gap-4 max-w-md shadow-2xl p-6 transform hover:scale-110 transition-transform ease-in-out delay-100"
+                  variants={cardVariants}
+                  initial="hidden"
+                  animate={controls}
+                  ref={ref}
+                >
                   <div>
                     <div className="p-3 max-w-max rounded-full bg-secondary text-3xl mb-3 text-white">
                       <SiSimpleanalytics />
@@ -71,9 +126,15 @@ const vANDd = () => {
                       </button>
                     </div>
                   </div>
-                </div>
+                </motion.div>
 
-                <div className="card-field flex flex-col gap-4 max-w-md shadow-2xl p-6 bg-secondary text-white transform hover:scale-110 transition-transform ease-in-out delay-100">
+                <motion.div
+                  className="card-field flex flex-col gap-4 max-w-md shadow-2xl p-6 bg-secondary text-white transform hover:scale-110 transition-transform ease-in-out delay-100"
+                  variants={cardVariants}
+                  initial="hidden"
+                  animate={controls}
+                  ref={ref}
+                >
                   <div>
                     <div className="p-3 max-w-max rounded-full bg-[#000] text-3xl mb-3 text-white">
                       <LiaEnvira />
@@ -82,7 +143,6 @@ const vANDd = () => {
                       Conscientização Ambiental
                     </h3>
                     <p className="mb-4">
-                      {" "}
                       O projeto serve como uma forma eficaz de conscientizar os
                       clientes sobre a importância da energia sustentável e como
                       pequenas ações podem ter um impacto significativo no meio
@@ -95,27 +155,34 @@ const vANDd = () => {
                       </button>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
-            
           </div>
-          
+
           <div className="cardBox mx-auto flex justify-center items-center gap-8 mt-16">
             <div className="flex flex-col gap-4">
-              <h1 className="text-3xl mt-4 text-[#7f1d1d] text-center underline">Desvantagens</h1>
+              <h1 className="text-3xl mt-4 text-[#7f1d1d] text-center underline">
+                Desvantagens
+              </h1>
 
               <div className="flex xl:flex-row flex-col gap-5 w-full">
-                <div className="card-field flex flex-col gap-4 max-w-md shadow-2xl p-6 bg-[#7f1d1d] text-white transform hover:scale-110 transition-transform ease-in-out delay-100">
+                <motion.div
+                  className="card-field flex flex-col gap-4 max-w-md shadow-2xl p-6 bg-[#7f1d1d] text-white transform hover:scale-110 transition-transform ease-in-out delay-100"
+                  variants={cardVariants}
+                  initial="hidden"
+                  animate={controls}
+                  ref={ref}
+                >
                   <div>
                     <div className="p-3 max-w-max rounded-full bg-[#000] text-3xl mb-3 text-white ">
-                      <IoAnalytics  />
+                      <IoAnalytics />
                     </div>
                     <h3 className="text-3xl font-bold mb-4">
-                        Investimento Inicial
+                      Investimento Inicial
                     </h3>
                     <p className="mb-4">
-                        A instalação dos equipamentos necessários para capturar e armazenar a energia cinética requer um investimento inicial significativo por parte das academias.
+                      A instalação dos equipamentos necessários para capturar e armazenar a energia cinética requer um investimento inicial significativo por parte das academias.
                     </p>
 
                     <div className="flex">
@@ -124,18 +191,24 @@ const vANDd = () => {
                       </button>
                     </div>
                   </div>
-                </div>
+                </motion.div>
 
-                <div className="card-field flex flex-col gap-4 max-w-md shadow-2xl p-6 transform hover:scale-110 transition-transform ease-in-out delay-100">
+                <motion.div
+                  className="card-field flex flex-col gap-4 max-w-md shadow-2xl p-6 transform hover:scale-110 transition-transform ease-in-out delay-100"
+                  variants={cardVariants}
+                  initial="hidden"
+                  animate={controls}
+                  ref={ref}
+                >
                   <div>
                     <div className="p-3 max-w-max rounded-full bg-[#7f1d1d] text-3xl mb-3 text-white">
                       <FaMoneyCheckAlt />
                     </div>
                     <h3 className="text-3xl font-bold mb-4">
-                        Manutenção
+                      Manutenção
                     </h3>
                     <p className="mb-4">
-                        Os equipamentos de geração e armazenamento de  energia exigirão manutenção regular para garantir seu funcionamento eficiente, o que pode representar custos adicionais para as academias.
+                      Os equipamentos de geração e armazenamento de  energia exigirão manutenção regular para garantir seu funcionamento eficiente, o que pode representar custos adicionais para as academias.
                     </p>
 
                     <div className="flex">
@@ -144,18 +217,24 @@ const vANDd = () => {
                       </button>
                     </div>
                   </div>
-                </div>
+                </motion.div>
 
-                <div className="card-field flex flex-col gap-4 max-w-md shadow-2xl p-6 bg-[#7f1d1d] text-white transform hover:scale-110 transition-transform ease-in-out delay-100">
+                <motion.div
+                  className="card-field flex flex-col gap-4 max-w-md shadow-2xl p-6 bg-[#7f1d1d] text-white transform hover:scale-110 transition-transform ease-in-out delay-100"
+                  variants={cardVariants}
+                  initial="hidden"
+                  animate={controls}
+                  ref={ref}
+                >
                   <div>
                     <div className="p-3 max-w-max rounded-full bg-[#000] text-3xl mb-3 text-white">
                       <FaUserFriends />
                     </div>
                     <h3 className="text-3xl font-bold mb-4">
-                        Adoção do Cliente
+                      Adoção do Cliente
                     </h3>
                     <p className="mb-4">
-                         A aceitação e participação dos clientes no projeto podem variar, sendo necessário um esforço de conscientização e incentivo por parte das academias para promover sua adesão.
+                      A aceitação e participação dos clientes no projeto podem variar, sendo necessário um esforço de conscientização e incentivo por parte das academias para promover sua adesão.
                     </p>
 
                     <div className="flex">
@@ -164,7 +243,7 @@ const vANDd = () => {
                       </button>
                     </div>
                   </div>
-                </div>
+                </motion.div>
               </div>
             </div>
           </div>
@@ -173,4 +252,5 @@ const vANDd = () => {
     </>
   );
 };
-export default vANDd;
+
+export default VANDd;

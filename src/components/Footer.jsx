@@ -11,12 +11,7 @@ const Footer = () => {
                         <h1 className="font-bold text-yellow-400 text-xl">Caminhos</h1>
                         <span><a href="#hero" className="cursor-pointer">Home</a></span>
                         <span><a href="#about" className="cursor-pointer">Sobre</a></span>
-                        
-                    </div>
-                    <div className="flex flex-col gap-4">
-                        <h1 className="font-bold text-yellow-400 text-xl">Cinemas</h1>
-                        <span><a href="#">Shopping</a></span>
-                        <span><a href="#">Teatro</a></span>
+                        <span><a href="#advantage" className="cursor-pointer">Vantagens</a></span>
                         
                     </div>
                     <div className="flex flex-col gap-4">
@@ -28,8 +23,8 @@ const Footer = () => {
                     </div>
                     <div className="flex flex-col gap-4">
                         <h1 className="font-bold text-yellow-400 text-xl">Contato</h1>
-                        <span><a href="#">Fale conosco</a></span>
-                        <span><a href="#">Contato</a></span>
+                        <span><a href="../contact">Fale conosco</a></span>
+                        <span><a href="../contact">Contato</a></span>
                        
                     </div>
                 </div>
