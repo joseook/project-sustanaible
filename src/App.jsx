@@ -6,6 +6,8 @@ import VanAndDes from './components/vANDd';
 import Contribution from './components/Contribution';
 import Footer from './components/Footer';
 
+import Button from './components/hooks/button';
+
 function App() {
 
   return (
@@ -18,6 +20,7 @@ function App() {
         <VanAndDes />
         <Contribution />
         <Footer />
+        <Button />
       </div>
     </>
   )
