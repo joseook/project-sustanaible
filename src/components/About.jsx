@@ -41,10 +41,11 @@ const About = () => {
           <div ref={ref}>
             <motion.div className="xl:flex lg:flex gap-6 justify-center item-center">
               <motion.div
-                className="card-box flex justify-start gap-4 flex-row flex-1  w-full "
+                className="card-box flex justify-start gap-4 xl:flex-row lg:flex-row flex-wrap flex-1 w-full "
                 initial={{ opacity: 0, y: 100 }}
                 animate={controls}
               >
+                {/* Card 1: Programas de Treinamento Especializado */}
                 <motion.div
                   whileHover={{ scale: 1.1 }}
                   className="card-field flex flex-col gap-3 shadow-2xl max-w-sm transform hover:scale-110 transition-transform delay-100 ease-out p-8 mt-12"
@@ -52,94 +53,84 @@ const About = () => {
                   <span className="icon-card text-6xl text-secondary">
                     <TbUsersGroup />
                   </span>
-                  <h2 className="text-2xl font-bold mb-2">Titulo 1</h2>
+                  <h2 className="text-2xl font-bold mb-2">Programas Especializados</h2>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quisquam, quod, quaerat, quibusdam quas quidem quod quaerat
-                    quaerat quaerat quaerat quaerat quaerat quaerat quaerat
-                    quaerat quaerat quaerat quaerat quaerat quaerat quaerat
-                    quaerat quaerat quaerat quaerat quaerat quaerat quaer
+                    Descubra nossos programas de treinamento especializado, incluindo treinamento de força, cardio, ioga e muito mais. Personalizado para atender aos seus objetivos de condicionamento físico.
                   </p>
-                  <div className='flex flex-row gap-2 justify-between w-full p-2 bg-primary text-white'>
+                  <div className='flex flex-wrap justify-center gap-2  w-full p-3 bg-primary text-white'>
                     <div>
-                      <h4 className='font-bold text-xl'>200 +</h4>
-                      <span className='font-light'>Clientes</span>
+                      <h4 className='font-bold '>Avaliação Gratuita</h4>
+                      <span className='font-light'>Agende a sua</span>
                     </div>
 
                     <div className='flex flex-col items-center'>
-                      <h4 className='font-bold text-xl'>200 +</h4>
-                      <span className='font-light'>Clientes</span>
+                      <h4 className='font-bold '>Treinadores Certificados</h4>
+                      <span className='font-light text-center text-[13px]'>Experiência Garantida</span>
                     </div>
 
                     <div className='flex flex-col items-center'>
-                      <h4 className='font-bold text-xl'>200 +</h4>
-                      <span className='font-light'>Clientes</span>
+                      <h4 className='font-bold '>Variedade de Opções</h4>
+                      <span className='font-light text-center text-[13px]'>Escolha o seu estilo</span>
                     </div>
                   </div>
                 </motion.div>
 
+                {/* Card 2: Nutrição e Bem-Estar */}
                 <motion.div
                   whileHover={{ scale: 1.1 }}
                   className="card-field flex flex-col gap-3 shadow-2xl max-w-sm transform hover:scale-110 transition-transform delay-100 ease-out p-8 mt-12"
                 >
                   <span className="icon-card text-6xl text-secondary">
-                    <TbUsersGroup />
+                    <GiPlantRoots />
                   </span>
-                  <h2 className="text-2xl font-bold mb-2">Titulo 1</h2>
+                  <h2 className="text-2xl font-bold mb-2">Nutrição e Bem-Estar</h2>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quisquam, quod, quaerat, quibusdam quas quidem quod quaerat
-                    quaerat quaerat quaerat quaerat quaerat quaerat quaerat
-                    quaerat quaerat quaerat quaerat quaerat quaerat quaerat
-                    quaerat quaerat quaerat quaerat quaerat quaerat quaer
+                    Descubra dicas de nutrição saudável e bem-estar para complementar seu treinamento. Aprenda como uma alimentação balanceada e hábitos saudáveis podem melhorar seu desempenho e bem-estar geral.
                   </p>
-                  <div className='flex flex-row gap-2 justify-between w-full p-2 bg-primary text-white'>
+                  <div className='flex flex-wrap justify-center gap-3 w-full p-3 bg-primary text-white'>
                     <div>
-                      <h4 className='font-bold text-xl'>200 +</h4>
-                      <span className='font-light'>Clientes</span>
+                      <h4 className='font-bold'>Receitas Saudáveis</h4>
+                      <span className='font-light text-center text-[13px]'>Experimente agora</span>
                     </div>
 
                     <div className='flex flex-col items-center'>
-                      <h4 className='font-bold text-xl'>200 +</h4>
-                      <span className='font-light'>Clientes</span>
+                      <h4 className='font-bold '>Dicas de Hidratação</h4>
+                      <span className='font-light text-center text-[13px]'>Mantenha-se hidratado</span>
                     </div>
 
                     <div className='flex flex-col items-center'>
-                      <h4 className='font-bold text-xl'>200 +</h4>
-                      <span className='font-light'>Clientes</span>
+                      <h4 className='font-bold '>Gestão do Estresse</h4>
+                      <span className='font-light text-center text-[13px]'>Mantenha a mente sã</span>
                     </div>
                   </div>
                 </motion.div>
 
+                {/* Card 3: Depoimentos de Clientes */}
                 <motion.div
                   whileHover={{ scale: 1.1 }}
                   className="card-field flex flex-col gap-3 shadow-2xl max-w-sm transform hover:scale-110 transition-transform delay-100 ease-out p-8 mt-12"
                 >
                   <span className="icon-card text-6xl text-secondary">
-                    <TbUsersGroup />
+                    <MdOutlineAnalytics />
                   </span>
-                  <h2 className="text-2xl font-bold mb-2">Titulo 1</h2>
+                  <h2 className="text-2xl font-bold mb-2">Depoimentos de Clientes</h2>
                   <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Quisquam, quod, quaerat, quibusdam quas quidem quod quaerat
-                    quaerat quaerat quaerat quaerat quaerat quaerat quaerat
-                    quaerat quaerat quaerat quaerat quaerat quaerat quaerat
-                    quaerat quaerat quaerat quaerat quaerat quaerat quaer
+                    Leia as histórias inspiradoras de clientes reais que alcançaram sucesso com nosso programa de treinamento. Descubra como eles transformaram suas vidas e alcançaram seus objetivos de fitness.
                   </p>
-                  <div className='flex flex-row gap-2 justify-between w-full p-2 bg-primary text-white'>
+                  <div className='flex flex-wrap justify-center items-center gap-2 w-full p-5 bg-primary text-white'>
                     <div>
-                      <h4 className='font-bold text-xl'>200 +</h4>
-                      <span className='font-light'>Clientes</span>
+                      <h4 className='font-bold '>Histórias Reais</h4>
+                      <span className='font-light text-center text-[13px]'>Inspire-se</span>
                     </div>
 
                     <div className='flex flex-col items-center'>
-                      <h4 className='font-bold text-xl'>200 +</h4>
-                      <span className='font-light'>Clientes</span>
+                      <h4 className='font-bold text-center'>Resultados Tangíveis</h4>
+                      <span className='font-light text-center text-[13px]'>Veja por si mesmo</span>
                     </div>
 
                     <div className='flex flex-col items-center'>
-                      <h4 className='font-bold text-xl'>200 +</h4>
-                      <span className='font-light'>Clientes</span>
+                      <h4 className='font-bold text-center'>Transformações Incríveis</h4>
+                      <span className='font-light text-center text-[13px]'>Mudança Real</span>
                     </div>
                   </div>
                 </motion.div>

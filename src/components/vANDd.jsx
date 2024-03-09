@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { useInView } from "react-intersection-observer";
+import { useMediaQuery } from 'react-responsive';
 import { GiPlantsAndAnimals } from "react-icons/gi";
 import { SiSimpleanalytics } from "react-icons/si";
 import { LiaEnvira } from "react-icons/lia";
@@ -8,30 +9,22 @@ import { IoAnalytics } from "react-icons/io5";
 import { FaMoneyCheckAlt } from "react-icons/fa";
 import { FaUserFriends } from "react-icons/fa";
 
+import { Link } from 'react-router-dom';
+
 const VANDd = () => {
   const { ref, inView } = useInView();
   const controls = useAnimation();
+  const isDesktopOrLaptop = useMediaQuery({ minDeviceWidth: 768 });
 
   useEffect(() => {
-    if (inView) {
+    if (inView && isDesktopOrLaptop) {
       controls.start({ opacity: 1, y: 0, transition: { delay: 0.5 } });
     } else {
       controls.start({ opacity: 0, y: -50 });
     }
-  }, [controls, inView]);
+  }, [controls, inView, isDesktopOrLaptop]);
 
-  const cardVariants = {
-    hidden: { opacity: 0, y: -50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: "easeInOut",
-      },
-    },
-  };
-
+ 
   const titleVariants = {
     hidden: { opacity: 0, y: -50 },
     visible: {
@@ -51,19 +44,14 @@ const VANDd = () => {
         <div className="container mx-auto px-4">
           <div className="flex flex-col">
             <motion.h1
-              className="text-5xl font-bold text-center mb-7"
+              className="xl:text-5xl lg:text-4xl text-3xl font-bold text-center mb-7"
               variants={titleVariants}
-              initial="hidden"
-              animate={controls}
               ref={ref}
             >
               Vantagens e desvantagens
             </motion.h1>
-            <p className="text-center">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit.
-              Cupiditate enim doloremque sit dolor atque ratione! Perspiciatis
-              autem sunt beatae rerum, illum veniam eius deleniti. Suscipit
-              incidunt debitis maxime? Placeat, asperiores.
+            <p className="text-center xl:text-xl text-[15px]">
+              Aqui estão as vantagens e desvantagens do projeto.
             </p>
           </div>
           <div className="cardBox mx-auto flex justify-center items-center gap-8">
@@ -73,9 +61,7 @@ const VANDd = () => {
               <div className="flex xl:flex-row flex-col gap-5 w-full">
                 <motion.div
                   className="card-field flex flex-col gap-4 max-w-md shadow-2xl p-6 bg-secondary text-white"
-                  variants={cardVariants}
-                  initial="hidden"
-                  animate={controls}
+                  
                   ref={ref}
                 >
                   <div>
@@ -94,17 +80,18 @@ const VANDd = () => {
 
                     <div className="flex">
                       <button className="p-2 transform hover:scale-110 hover:bg-[#fff] hover:text-[#000] transition-transform ease-in bg-primary rounded-lg text-white">
-                        Contribuir
+                        <Link to="/contact" >
+                          Contribuir
+                        </Link>
                       </button>
                     </div>
                   </div>
                 </motion.div>
 
+
                 <motion.div
                   className="card-field flex flex-col gap-4 max-w-md shadow-2xl p-6 transform hover:scale-110 transition-transform ease-in-out delay-100"
-                  variants={cardVariants}
-                  initial="hidden"
-                  animate={controls}
+                  
                   ref={ref}
                 >
                   <div>
@@ -122,7 +109,9 @@ const VANDd = () => {
 
                     <div className="flex">
                       <button className="p-2 transform hover:scale-110 hover:bg-[#fff] hover:text-[#000] transition-transform ease-in bg-primary rounded-lg text-white">
-                        Contribuir
+                        <Link to="/contact" >
+                          Contribuir
+                        </Link>
                       </button>
                     </div>
                   </div>
@@ -130,9 +119,7 @@ const VANDd = () => {
 
                 <motion.div
                   className="card-field flex flex-col gap-4 max-w-md shadow-2xl p-6 bg-secondary text-white transform hover:scale-110 transition-transform ease-in-out delay-100"
-                  variants={cardVariants}
-                  initial="hidden"
-                  animate={controls}
+                 
                   ref={ref}
                 >
                   <div>
@@ -151,7 +138,9 @@ const VANDd = () => {
 
                     <div className="flex">
                       <button className="p-2 transform hover:scale-110 hover:bg-[#fff] hover:text-[#000] transition-transform ease-in bg-primary rounded-lg text-white">
-                        Contribuir
+                        <Link to="/contact" >
+                          Contribuir
+                        </Link>
                       </button>
                     </div>
                   </div>
@@ -169,9 +158,7 @@ const VANDd = () => {
               <div className="flex xl:flex-row flex-col gap-5 w-full">
                 <motion.div
                   className="card-field flex flex-col gap-4 max-w-md shadow-2xl p-6 bg-[#7f1d1d] text-white transform hover:scale-110 transition-transform ease-in-out delay-100"
-                  variants={cardVariants}
-                  initial="hidden"
-                  animate={controls}
+                 
                   ref={ref}
                 >
                   <div>
@@ -187,7 +174,9 @@ const VANDd = () => {
 
                     <div className="flex">
                       <button className="p-2 transform hover:scale-110 hover:bg-[#fff] hover:text-[#000] transition-transform ease-in bg-primary rounded-lg text-white">
-                        Contribuir
+                        <Link to="/contact" >
+                          Contribuir
+                        </Link>
                       </button>
                     </div>
                   </div>
@@ -195,9 +184,7 @@ const VANDd = () => {
 
                 <motion.div
                   className="card-field flex flex-col gap-4 max-w-md shadow-2xl p-6 transform hover:scale-110 transition-transform ease-in-out delay-100"
-                  variants={cardVariants}
-                  initial="hidden"
-                  animate={controls}
+                  
                   ref={ref}
                 >
                   <div>
@@ -212,8 +199,10 @@ const VANDd = () => {
                     </p>
 
                     <div className="flex">
-                      <button className="p-2 bg-primary rounded-lg text-white transform hover:scale-110 hover:bg-[#fff] hover:text-[#000] transition-transform ease-in">
-                        Contribuir
+                      <button className="p-2 transform hover:scale-110 hover:bg-[#fff] hover:text-[#000] transition-transform ease-in bg-primary rounded-lg text-white">
+                        <Link to="/contact" >
+                          Contribuir
+                        </Link>
                       </button>
                     </div>
                   </div>
@@ -221,9 +210,7 @@ const VANDd = () => {
 
                 <motion.div
                   className="card-field flex flex-col gap-4 max-w-md shadow-2xl p-6 bg-[#7f1d1d] text-white transform hover:scale-110 transition-transform ease-in-out delay-100"
-                  variants={cardVariants}
-                  initial="hidden"
-                  animate={controls}
+                  
                   ref={ref}
                 >
                   <div>
@@ -239,7 +226,9 @@ const VANDd = () => {
 
                     <div className="flex">
                       <button className="p-2 transform hover:scale-110 hover:bg-[#fff] hover:text-[#000] transition-transform ease-in bg-primary rounded-lg text-white">
-                        Contribuir
+                        <Link to="/contact" >
+                          Contribuir
+                        </Link>
                       </button>
                     </div>
                   </div>

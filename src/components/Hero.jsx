@@ -2,6 +2,8 @@ import { motion } from "framer-motion";
 import { PiPlantDuotone } from "react-icons/pi";
 import { CiLocationArrow1 } from "react-icons/ci";
 
+import { Link } from 'react-router-dom';
+
 const Hero = () => {
   return (
     <>
@@ -23,10 +25,7 @@ const Hero = () => {
                 transition={{ duration: 0.5, delay: 0.2 }}
                 className="xl:w-1/2 lg:w-1/2 font-light xl:text-left lg:text-left text-center"
               >
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Labore
-                mollitia ut harum accusantium, vitae amet? Officiis culpa id
-                sapiente a placeat quae magni, quo consequuntur hic doloribus
-                blanditiis doloremque alias?
+                O projeto Academia Sustentável visa proporcionar uma solução inovadora para academias, promovendo a sustentabilidade energética enquanto os clientes se exercitam. Reconhecendo a importância da adoção de fontes de energia renovável, nossa plataforma integra a geração de energia durante o exercício físico, contribuindo para a redução dos custos de energia das academias e promovendo um estilo de vida mais sustentável.
               </motion.p>
 
               <motion.div
@@ -37,15 +36,11 @@ const Hero = () => {
               >
                 <motion.button
                   whileHover={{ scale: 1.1 }}
-                  className="flex max-w-max pl-2 h-[40px] rounded-xl items-center gap-2 bg-primary text-[#ffff] text-xl hover:bg-[#fff] hover:text-[#000] tranform transition-transform ease-in-out delay-150 hover:scale-110"
-                >
-                  Download Job <PiPlantDuotone />
-                </motion.button>
-                <motion.button
-                  whileHover={{ scale: 1.1 }}
                   className="flex items-center max-w-max h-[40px] pl-2 rounded-xl gap-2 bg-secondary text-[#ffff] text-xl hover:bg-[#000] hover:text-[#fff] tranform transition-transform ease-in-out delay-150 hover:scale-110"
                 >
-                  Formulário <CiLocationArrow1 />
+                  <Link to='/contact' className="flex gap-2 items-center" >
+                    Formulário <CiLocationArrow1 />
+                  </Link>
                 </motion.button>
               </motion.div>
             </div>
@@ -71,7 +66,7 @@ const Hero = () => {
             </div>
           </div>
         </div>
-        <div className="absolute left-0 z-[-10]">
+        <div className="absolute xl:flex lg:flex hidden left-0 z-[-10]">
           <motion.img
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}

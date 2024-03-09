@@ -49,13 +49,13 @@ const Navbar = () => {
         >
           <ul className="lg:flex lg:items-center lg:gap-4 lg:font-bold lg:text-xl lg:ml-auto lg:pt-0 h-full md:shadow-2xl p-4 rounded-sm">
             <motion.li whileHover={{ scale: 1.1 }}>
-              <Link to="/" className="hover:bg-primary p-2 rounded-lg hover:text-[#fff]">Home</Link>
+              <a href="#home" className="hover:bg-primary p-2 rounded-lg hover:text-[#fff]">Home</a>
             </motion.li>
             <motion.li whileHover={{ scale: 1.1 }}>
-              <Link to="#about" className="hover:bg-primary p-2 rounded-lg hover:text-[#fff]">Sobre</Link>
+              <a href="#about" className="hover:bg-primary p-2 rounded-lg hover:text-[#fff]">Sobre</a>
             </motion.li>
             <motion.li whileHover={{ scale: 1.1 }}>
-              <Link to="#advantage" className="hover:bg-primary p-2 rounded-lg hover:text-[#fff]">Vantagens</Link>
+              <a href="#advantage" className="hover:bg-primary p-2 rounded-lg hover:text-[#fff]">Vantagens</a>
             </motion.li>
             <motion.li whileHover={{ scale: 1.1 }}>
               <Link to="/contact" className="hover:bg-primary p-2 rounded-lg hover:text-[#fff]">Contact</Link>
