@@ -35,16 +35,14 @@ const Contact = () => {
   const emailInputRef = useRef(null);
   const messageInputRef = useRef(null);
 
-  const FORMSPREE_ENDPOINT = "https://formspree.io/f/mrgnlkkn";
+  
 
   const handleSubmit = async (event) => {
     event.preventDefault();
     const form = document.getElementById("contact-form");
     const formData = new FormData(form);
 
-    const name = formData.get("name").trim();
-    const email = formData.get("email").trim();
-    const message = formData.get("message").trim();
+    const { name, email, message } = Object.fromEntries([...formData.entries()].map(([key, value]) => [key, value.trim()]));
 
     if (!name) {
       toast.error("Por favor, insira seu nome.");
@@ -65,7 +63,7 @@ const Contact = () => {
     }
 
     try {
-      const response = await fetch(FORMSPREE_ENDPOINT, {
+      const response = await fetch("https://formspree.io/f/mrgnlkkn", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -75,9 +73,7 @@ const Contact = () => {
 
       if (response.ok) {
         toast.success("Obrigado pelo seu feedback!");
-        nameInputRef.current.value = "";
-        emailInputRef.current.value = "";
-        messageInputRef.current.value = "";
+        form.reset();
       } else {
         toast.error("Algo deu errado. Por favor, tente novamente mais tarde.");
       }
