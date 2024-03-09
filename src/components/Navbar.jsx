@@ -27,7 +27,7 @@ const Navbar = () => {
     <header className="container">
       <div className="items-center justify-between flex">
         <div className="max-w-[70px]">
-          <img src="../logo02.svg" alt="Logo" className='rounded-full p-2' />
+          <img src=".././logo02.svg" alt="Logo" className='rounded-full p-2' />
         </div>
         <nav className="xl:hidden lg:hidden">
           <button onClick={toggleMenu} className="block text-gray-500 hover:text-white focus:text-white focus:outline-none">

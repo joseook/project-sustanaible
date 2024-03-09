@@ -46,7 +46,7 @@ export default {
         'body-card02': "url('./about/img06.jpg')",
         'shape-liquid': "url('./hero/shape-liquidation-removebg-preview.png')",
         'shape-liquid02': "url('./hero/shape-liquidation02-removebg-preview.png')",
-        'wave-shape02': "url('./contribution/wavy-shape.jpg')",
+        'wave-shape02': "url('./public/contribution/wavy-shape.jpg')",
         'contact_img': "url('./contact/desk-office.jpg')",
         'contact_img02': "url('./contact/workdesk-with-envelopes-laptop.jpg')",
       }
