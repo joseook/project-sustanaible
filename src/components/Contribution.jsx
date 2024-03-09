@@ -33,7 +33,7 @@ const Contribution = () => {
     <>
       <section
         id="contribution"
-        className="bg-no-repeat bg-center bg-cover bg-wave-shape02"
+        className="bg-no-repeat bg-center bg-cover bg-(url['./hero/wavy-shape.jpg'])"
         ref={ref}
       >
         <div className="container mx-auto">

@@ -50,8 +50,8 @@ const Hero = () => {
                   initial={{ opacity: 0, x: -50 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.5, delay: 0.6 }}
-                  src="./public/hero/hero-img-removebg-preview.png"
-                  className="z-10 w-[800px]"
+                  src="./hero/hero-img-removebg-preview.png"
+                  className="z-10 "
                   alt="Imagem Home Sustentavel"
                 />
               </div>
