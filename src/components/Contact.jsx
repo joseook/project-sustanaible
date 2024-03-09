@@ -170,8 +170,7 @@ const Contact = () => {
                   Contacte <span className="text-[#b91c1c]">conosco</span>
                 </h1>
                 <p className="text-center text-[#4ade80] mb-12">
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Odit
-                  ad odio minima dolorem ipsa debitis.
+                  Nos ajude a crescer o nosso projeto contribuindo com o questionário abaixo.
                 </p>
               </div>
             </div>
